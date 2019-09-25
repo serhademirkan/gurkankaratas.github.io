@@ -161,5 +161,21 @@
       });
 
 </script>
+      <script>audio.play();</script>
+<script>     
+            var status = false;
+            var audio = document.getElementById("player");
+            audio.loop = true;         
+            audio.play();
+            function audioHandler(){
+              if(status == false || audio.paused){
+                audio.play();
+                status = true;
+              }else{
+                audio.pause();
+                status = false;
+              }
+            }
+</script>
 </body>
 </html>
