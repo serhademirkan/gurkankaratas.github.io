@@ -7,7 +7,7 @@
       <title>Serhat Demirkan Desing @hightlevelMODE</title>
       <meta author="Serhat Demirkan" content="ig: @serhatdemrkn">
       <!-- stylesheet -->
-      <link rel="stylesheet" href="https://serhademirkan.github.io/gurkankaratas.github.io/style.css">
+      <link rel="stylesheet" href="https://serhademirkan.github.io/gurkankaratas.github.io/style.css>
 
       <!-- ionicons -->
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -50,26 +50,13 @@
 
                   <div class="listensong">
                         <ul>
-                              <audio id="player" src="https://serhademirkan.github.io/gurkankaratas.github.io/gurkankaratasvaycover.mp3" audio.play();></audio>
+                               
+                              <audio id="player" src="https://serhademirkan.github.io/gurkankaratas.github.io/gurkankaratasvaycover.mp3"></audio>
                               <li><ion-icon name="play"onclick="audioHandler()"></ion-icon></li>
                               <li><ion-icon name="musical-notes"></ion-icon></li>
                               <li><ion-icon name="microphone"></ion-icon></li>
                               <li><ion-icon name="videocam"></ion-icon></li>
-                              <script>     
-                                          var status = false;
-                                          var audio = document.getElementById("player");
-                                          audio.loop = true;         
-                                          audio.play();
-                                          function audioHandler(){
-                                            if(status == false || audio.paused){
-                                              audio.play();
-                                              status = true;
-                                            }else{
-                                              audio.pause();
-                                              status = false;
-                                            }
-                                          }
-                              </script>
+                              
                         </ul>
                   </div>
             </div>
@@ -161,10 +148,7 @@
       });
 
 </script>
- <audio controls autoplay>
-  <source src="https://serhademirkan.github.io/gurkankaratas.github.io/gurkankaratasvaycover.mp3" type="audio/mpeg">
-</audio>
-      <script>audio.play();</script>
+<script>audio.play();</script>
 <script>     
             var status = false;
             var audio = document.getElementById("player");
