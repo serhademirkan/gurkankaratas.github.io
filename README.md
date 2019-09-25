@@ -1,37 +1,156 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Serhat Demirkan Desing @hightlevelMODE</title>
+      <meta author="harrnish" content="ig: @harrnish">
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="style.css">
 
-You can use the [editor on GitHub](https://github.com/serhademirkan/gurkankaratas.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+      <!-- ionicons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      <!-- jquery -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     
+      <!-- tweenmax - gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+     
+</head>
+<body>
 
-### Markdown
+      <div class="wrapper">
+            <div class="hero-section">   
+                  <div class="nav">
+                        <div class="artist">Gürkan Karataş</div>
+                        <div class="watch"><ion-icon name="play"></ion-icon> şimdi izle</div>
+                        <div class="menu"><ion-icon name="menu"></ion-icon></div>
+                  </div>
+                  
+                  <div class="hero-gif"></div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+                  <div class="hero-title">
+                        <h1 class="glitch" data-text="Underrated">VAY (SEZEN AKSU COVER)</h1>
+                        <p>Yeni Cover</p>
+                  </div>
 
-```markdown
-Syntax highlighted code block
+                  <div class="rotatethis">
+                        <h2 id="rotated">Serhat • Demirkan • Music • Desing • AdManager • </h2>
+                  </div>
 
-# Header 1
-## Header 2
-### Header 3
+                  <div class="social-media">
+                        <ul>
+                              <a href="https://www.youtube.com/channel/UCCG6rkI2kfwcGqmUEWm8Waw"><li>youtube</li></a>
+                              <a href="https://www.instagram.com/gurkankrts"><li>instagram</li></a>
+                              <a href="https://twitter.com/karasalamander"><li>twitter</li></a>
+                        </ul>
+                  </div>
 
-- Bulleted
-- List
+                  <div class="listensong">
+                        <ul>
+                              <audio id="player" src="gurkankaratasvaycover.mp3" audio.play();></audio>
+                              <li><ion-icon name="play"onclick="audioHandler()"></ion-icon></li>
+                              <li><ion-icon name="musical-notes"></ion-icon></li>
+                              <li><ion-icon name="microphone"></ion-icon></li>
+                              <li><ion-icon name="videocam"></ion-icon></li>
+                              <script>     
+                                          var status = false;
+                                          var audio = document.getElementById("player");
+                                          audio.loop = true;         
+                                          audio.play();
+                                          function audioHandler(){
+                                            if(status == false || audio.paused){
+                                              audio.play();
+                                              status = true;
+                                            }else{
+                                              audio.pause();
+                                              status = false;
+                                            }
+                                          }
+                              </script>
+                        </ul>
+                  </div>
+            </div>
 
-1. Numbered
-2. List
+            <div class="gif-overlay"></div>
+      </div>
 
-**Bold** and _Italic_ and `Code` text
+      <script type="text/javascript" src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/serhademirkan/gurkankaratas.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<script>
+      
+      const circleType = new CircleType(document.getElementById('rotated'));   
+      TweenMax.from(".artist", 2, {
+      delay: 5.4,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".watch", 2, {
+      delay: 5.5,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".menu", 2, {
+      delay: 5.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".rotatethis", 2, {
+      delay: 6,
+      opacity: 0,
+      ease: Expo.easeInOut
+      });
+      TweenMax.staggerFrom(".social-media ul li", 2, {
+      delay: 5.7,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      }, 0.1);
+      TweenMax.staggerFrom(".listensong ul li", 2, {
+      delay: 5.9,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      }, 0.1);  
+      TweenLite.fromTo(".hero-title h1", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 5,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+      TweenLite.fromTo(".hero-title p", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 9,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+</script>
+</body>
+</html>
